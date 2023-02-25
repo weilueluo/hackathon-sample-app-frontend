@@ -1,0 +1,9 @@
+<div id="backend-service">
+    <h3>Backend Service</h3>
+    <p *ngIf="backendMessage !== '';else no_backend_message">{{backendMessage}}</p>
+    <ng-template #no_backend_message>
+        <p style="font-style: italic;">backend message is empty</p>
+    </ng-template>
+    <button class="backend-button" (click)="onBackendButtonClick()">talk to backend</button>
+    <p>clicks: {{clicks}}</p>
+</div>
